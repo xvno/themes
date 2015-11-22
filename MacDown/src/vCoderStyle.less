@@ -52,14 +52,14 @@ body {
     table {
         margin: 10px 0 15px 0;
         border-collapse: collapse;
-    }
-    td,
-    th {
-        border: 1px solid #ddd;
-        padding: 3px 10px;
-    }
-    th {
-        padding: 5px 10px;
+        td,
+        th {
+            border: 1px solid #ddd;
+            padding: 3px 10px;
+        }
+        th {
+            padding: 5px 10px;
+        }
     }
     a {
         color: #59acf3;
@@ -119,6 +119,7 @@ body {
         white-space: pre;
         white-space: pre-wrap;
         word-wrap: break-word;
+        border: 1px solid #50CCCB;
         code {
             color: #ff4a14;
             font-size: 12px;
@@ -131,13 +132,14 @@ body {
         line-height: 0;
     }
     ul {
-        font-size: 0.8em;
+        font-size: 0.9em;
+        font-weight: bold;
     }
 }
+
 * {
     -webkit-print-color-adjust: exact;
 }
-
 
 @media screen and(min-width: 914px) {
     body {
@@ -145,11 +147,21 @@ body {
         margin: 10px auto;
     }
 }
+
 @media print {
-    body, code, pre code, h1, h2, h3, h4, h5, h6 {
+    body,
+    code,
+    pre code,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
         color: black;
     }
-    table, pre {
+    table,
+    pre {
         page-break-inside: avoid;
     }
 }
