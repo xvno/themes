@@ -1,0 +1,425 @@
+alias commonrc="vi $HOME/.commonrc"
+alias common="vi $HOME/.commonrc"
+alias crc="vi $HOME/.commonrc"
+
+# Set personal aliases
+alias zshrc="vi ~/.zshrc"
+alias vimrc="vi ~/.vimrc"
+alias src="source ~/.zshrc"
+
+# Golang
+export GOHOME="$HOME/Go"
+alias gov="go version"
+alias cdgo=$HOME/Go
+alias ggu="go get -u"
+alias gorc="vi $GOHOME/Gorc"
+source $GOHOME/Gorc
+
+# Java
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home"
+export PATH=$JAVA_HOME/bin:$PATH
+export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+export PATH="/usr/local/opt/maven@3.5/bin:$PATH"
+
+# Anaconda
+export PATH="/anaconda3/bin:$PATH"
+
+# Python
+alias pv="python --version"
+alias pis="pip install"
+alias python2="/Users/volving/.pyenv/shims/python2"
+alias chromed="chromedriver"
+alias geckod="geckodriver"
+
+# Python pyenv
+alias pe="pyenv"
+export PYENV_ROOT="$HOME/.pyenv"
+
+PATH="$PYENV_ROOT/bin:$PATH"
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+
+
+# Python virtualenv
+alias ve="virtualenv"
+alias venv="virtualenv env"
+
+alias act="source ./env/bin/activate"
+alias Act="source ./ENV/bin/activate"
+
+alias da="deactivate"
+alias dap="export PYTHONHOME=''"
+
+alias pf="pip freeze > requirements.txt"
+alias pir="pip install -r"
+alias pi="pip install -r requirements.txt"
+
+
+# Django
+alias dja="django-admin"
+alias m="python manage.py"
+alias mrun="python manage.py runserver 127.0.0.1:8000"
+alias mm="python manage.py migrate"
+alias mmm="python manage.py makemigrations"
+
+
+# Flask
+alias f="flask"
+alias fr="flask run"
+alias frun="flask run"
+alias flasky="cd $HOME/Git/Focus/Flask/flask-web-demos/flasky"
+alias fapp="fa"
+fa() {
+#  if $# -gt 0
+#  then
+    export FLASK_APP="$1"
+#  fi
+}
+
+fd() {
+  export FLASK_DEBUG=$1
+}
+
+fed() {
+  export FLASK_ENV=development
+  fd 1
+}
+
+fep() {
+  export FLASK_ENV=production
+  fd 0
+}
+
+
+# MySQL
+PATH=$PATH:/usr/local/Cellar/mysql@5.6/5.6.42/bin
+alias startmysql="brew services start mysql@5.6"
+alias stopmysql="brew services stop mysql@5.6"
+
+# php70 etc.
+
+
+# System
+alias rr="rm -fr"
+alias cpr="cp -fr"
+alias cpa="cp -fr"
+
+alias o="open . -a Finder"
+alias of="open -a Finder"
+# alias f="open -a Finder"
+alias oc="open -a Google\ Chrome"
+alias c="open -a Google\ Chrome"
+alias a="open -a Atom ."
+alias oa="open -a Atom"
+alias vs="open -a Visual\ Studio\ Code.app"
+alias ov="open -a Visual\ Studio\ Code.app"
+alias ow="open . -a Egret\ Wing\ 3"
+alias om="open -a MacDown"
+alias wing="open -a Egret\ Wing\ 3"
+alias ot="open -a TextWrangler"
+
+alias psag="ps aux | grep"
+alias t="touch"
+
+# cd
+alias cd1="cd .."
+alias cd2="cd ../.."
+alias cd3="cd ../../.."
+alias cd4="cd /"
+alias cdg="cd ~/Git"
+alias rouchi="cd ~/Careers/Rouchi"
+alias cdp="cd ~/Projects"
+alias cdd="cd ~/Downloads"
+alias tut="cd ~/Tutorials"
+alias cdtt="cd ~/Git/tuts"
+alias cdt="cd ~/Git/__tmp"
+alias cdr="cd ~/Git/React"
+alias dir="ls -l"
+alias desk="cd ~/Desktop"
+alias cdsrc="cd ~/SRC/"
+alias cds="cd ~/SRC/"
+alias cdsnippet="cd ~/Git/SNIPPETS/"
+alias snippet="cd ~/Git/SNIPPETS/"
+alias snip="cd ~/Git/SNIPPETS/"
+alias cdscript="cd ~/Warehouse/scriptwarehouse"
+alias cdstyle="cd ~/Warehouse/stylewarehouse"
+alias cdware="cd ~/Warehouse"
+alias cdpo="popd"
+alias cdpu=f"pushd"
+alias cdp="cd ~/Projects"
+alias p="cdp"
+alias cdssh="cd $HOME/.ssh"
+alias sshconfig="vi $HOME/.ssh/config"
+
+alias kk="popd"
+alias jj="pushd"
+alias ek="echo"
+
+
+# AI
+alias ai="cd $HOME/AI"
+alias oct="octave"
+## Machine Learning
+
+
+# blockchains
+alias cdb="~/Git/Blockchains"
+alias cdeos="cd ~/Git/Blockchains/eosio"
+
+
+# Git
+alias gcommitm="git commit -m"
+alias gca="git commit --amend"
+alias gitcommit="git commit"
+alias gclone="git clone"
+
+alias gadd="git add"
+alias gitadd="git add"
+alias gitbranch="git branch"
+alias gbranch="g branceh"
+alias gb="git branch"
+alias gitpull="git pull"
+alias gpull="git pull"
+alias gpr="git pull --rebase"
+
+alias gitpush="git push"
+alias gpush="git push"
+
+alias gpall="gpx & gpv"
+alias gpallm="gpxm & gpvm"
+alias gpam="gpallm"
+alias gpallmf="gpxmf & gpvmf"
+alias gpamf="gpallmf"
+
+alias gpxvno="git push -u xvno"
+alias gpx="git push -u xvno"
+
+alias gpxd="git push -u xvno dev"
+alias gpxm="git push -u xvno master"
+
+alias gpxf="git push -u xvno -f"
+alias gpxdf="git push -u xvno -f dev"
+alias gpxmf="git push -u xvno -f master"
+
+alias gpv="git push -u volving"
+alias gpvolving="git push -u volving"
+
+alias gpvd="git push -u volving dev"
+alias gpvm="git push -u volving master"
+
+alias gpvf="git push -u volving -f"
+alias gpvdf="git push -u volving dev -f"
+alias gpvmf="git push -u volving master -f"
+
+
+alias grem="git remote"
+alias gremote="git remote"
+alias gradd="git remote add"
+alias graddxvno="git remote add xvno"
+alias graddvolving="git remote add volving"
+
+alias gitlog="git log --oneline --decorate --color --graph"
+alias gl="git log --oneline --decorate --color --graph"
+alias gitstatus="git status"
+alias gstatus="git status"
+alias gits="git status"
+alias gs="git status"
+alias gaa="git add ."
+alias ga="git add"
+alias gcam="git commit -am "
+alias gcm="git commit -m"
+alias gc="git commit"
+alias grebase="git rebase"
+alias greb="git rebase"
+alias gri="git rebase -i"
+
+alias glr="gitlog --reflog"
+alias gcp="git cherry-pick"
+alias gck="git checkout"
+alias gch="git checkout"
+
+# BrowserSync
+alias bs="browser-sync"
+alias bss="browser-sync start --server --files *.*"
+
+
+# MongoDB
+alias startmongodb="mongod --config /Users/volving/DB/mongodb/mongo.conf"
+
+
+# Others
+alias milos="cd /Users/volving/z/vg/zyvg/vg/milos"
+alias vg="cd /Users/volving/z/vg"
+alias v="vagrant"
+alias lamb="cd /Users/volving/Lambda/LambdaOJ2/"
+
+alias index='open -a Safari ./_build/html/index.html'
+alias cdnginx='cd /usr/local/nginx'
+
+alias zy="open -a Cmd\ Markdown"
+alias s3='open -a Sublime\ Text'
+
+alias fis="~/Git/fis3"
+
+alias focus="cd $HOME/Git/Focus/"
+
+# Node.js
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# React
+alias mdreact="create-react-app"
+
+
+# React Native
+alias rna="create-react-native-app"
+
+
+# React
+alias ra="create-react-app"
+
+
+# ionic
+alias i="ionic"
+
+
+# Milos
+alias salt="cd ~/salt"
+
+
+# TypeScript
+alias ts="ts-node"
+
+
+# Heroku
+alias h="heroku"
+alias gphm="git push heroku master"
+alias gh="git push heroku master"
+alias hc="heroku create"
+
+
+# Webpack
+alias wp="webpack"
+alias wpds="webpack-dev-server"
+alias wpdev="webpack-dev-server"
+
+
+# Android
+alias android="cd /Users/volving/Android"
+export ANDROID_HOME="$HOME/Android/sdk"
+export ANDROID_SDK_ROOT="$HOME/Android/sdk"
+PATH="$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools"
+
+
+# Scala
+PATH="$PATH:/usr/local/scala/bin"
+
+
+################################# Node相关
+# Nodejs playground
+alias trynodejs="cd /Users/volving/Tutorials/tut-nodejs/"
+alias tutnodejs="trynodejs"
+alias tutn="trynodejs"
+alias nodejs="trynodejs"
+
+# NVM
+alias nvmrc="source ~/.nvm/nvmrc"
+
+
+# NPM
+alias ni="npm install"
+alias nin="npm init"
+alias nis="npm install -S"
+alias nid="npm install --save-dev"
+alias nig="npm install -g"
+alias nr="npm remove"
+alias nrs="npm remove -S"
+alias nrd="npm remove -save-dev"
+alias nrg="npm remove -g"
+alias rundev="npm run dev"
+## clear out node_modules
+alias cls="rr */**/node_modules"
+
+
+# CNPM
+alias cn="cnpm"
+alias cni="cnpm install"
+alias cnin="cnpm init"
+alias cnis="cnpm install -S"
+alias cnid="cnpm install --save-dev"
+alias cnig="sudo cnpm install -g"
+alias cnr="cnpm remove"
+alias cnrs="cnpm remove -S"
+alias cnrd="cnpm remove -save-dev"
+alias cnrg="cnpm remove -g"
+
+
+# Bower
+alias bi="bower install"
+alias bis="bower install -S"
+alias bini="bower init"
+
+
+# Yarn
+alias ya="yarn add"
+alias yas="yarn add -s"
+alias yi="yarn install"
+alias yin="yarn init"
+alias yr="yarn remove"
+alias yu="yarn upgrade"
+
+
+# Electron
+alias e="electron"
+alias ep="electron-packager"
+
+
+# Cordova
+alias cor="cordova"
+alias corc="cordova create"
+
+
+# Jekyll
+alias j="jekyll"
+alias bd="bundle"
+alias whi="which"
+alias bej="bundle exec jekyll"
+
+
+# Kubernets
+alias kc="kubectl"
+alias minik="minikube"
+
+
+# Blockchain
+alias cmk="cmake"
+alias cm="cmake"
+
+
+# Atom
+alias apmdi="apm deinstall"
+alias apmi="apm install"
+alias apmd="apm disable"
+
+
+# Proxies
+alias ppp="export all_proxy=socks5://127.0.0.1:1080"
+alias qqq="unset all_proxy"
+
+
+# Docker
+alias d="docker"
+alias di="docker image"
+alias dr="docker run"
+alias dis="docker images"
+
+
+export PATH
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/usr/local/lib/google-cloud-sdk/path.zsh.inc' ]; then . '/usr/local/lib/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/usr/local/lib/google-cloud-sdk/completion.zsh.inc' ]; then . '/usr/local/lib/google-cloud-sdk/completion.zsh.inc'; fi

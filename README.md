@@ -8,3 +8,8 @@ All these themes in this repo is a collection of my favorites.
   * vCoderStyle
 * iTerm2
   vn.zsh-theme
+
+## Configure files
+
+* oh-my-zsh
+  * .zshrc + .commonrc
