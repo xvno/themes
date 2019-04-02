@@ -6,6 +6,8 @@ All these themes in this repo is a collection of my favorites.
 
 * MacDown
   * vCoderStyle
+* MWeb
+  * shrinked-solarized-light
 * iTerm2
   vn.zsh-theme
 
