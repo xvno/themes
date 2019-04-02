@@ -6,4 +6,5 @@ All these themes in this repo is a collection of my favorites.
 
 * MacDown
   * vCoderStyle
-
+* iTerm2
+  vn.zsh-theme
