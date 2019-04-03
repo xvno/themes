@@ -15,3 +15,7 @@ All these themes in this repo is a collection of my favorites.
 
 * oh-my-zsh
   * .zshrc + .commonrc
+
+## Linter & Prettier
+
+* vetur: vscode for vue.js
